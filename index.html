@@ -480,6 +480,28 @@
         color: var(--brass);
         margin-bottom: 16px;
       }
+      .slide.photo {
+        padding: 0;
+      }
+      .slide.photo::before,
+      .slide.photo::after {
+        display: none;
+      }
+      .slide.photo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .ig-credit {
+        text-align: center;
+        font-size: 11px;
+        color: var(--parch-faint);
+        margin-top: 7px;
+        font-style: italic;
+      }
       .ig-dots {
         display: flex;
         gap: 5px;
@@ -878,8 +900,15 @@
                 </div>
                 <div
                   class="ig-carousel"
-                  aria-label="Sample carousel: George Washington, three slides"
+                  aria-label="Sample carousel: George Washington, six slides interleaving archival imagery and typographic cards"
                 >
+                  <div class="slide photo">
+                    <img
+                      src="assets/gw-lithograph.jpg"
+                      alt="Nineteenth-century color lithograph 'Washington as a Freemason': Washington in Masonic apron and sash between two pillars, framed by an arch bearing the title."
+                      loading="lazy"
+                    />
+                  </div>
                   <div class="slide">
                     <svg
                       class="s-emblem"
@@ -910,6 +939,13 @@
                       Fredericksburg Lodge No.&nbsp;4, Virginia · initiated 1752
                     </div>
                   </div>
+                  <div class="slide photo">
+                    <img
+                      src="assets/gw-trumbull.jpg"
+                      alt="John Trumbull's painting of General George Washington resigning his commission to Congress, presented on a dark charcoal ground."
+                      loading="lazy"
+                    />
+                  </div>
                   <div class="slide">
                     <div class="s-kicker">The Brother</div>
                     <div
@@ -923,6 +959,13 @@
                       presidential oath in 1789 on the altar Bible of
                       St.&nbsp;John's Lodge No.&nbsp;1, New York.
                     </div>
+                  </div>
+                  <div class="slide photo">
+                    <img
+                      src="assets/gw-rushmore.jpg"
+                      alt="Mount Rushmore with George Washington's carved likeness most prominent, presented on a dark charcoal ground."
+                      loading="lazy"
+                    />
                   </div>
                   <div class="slide">
                     <div class="s-kicker">The Craft</div>
@@ -940,7 +983,7 @@
                   </div>
                 </div>
                 <div class="ig-dots" aria-hidden="true">
-                  <i class="on"></i><i></i><i></i>
+                  <i class="on"></i><i></i><i></i><i></i><i></i><i></i>
                 </div>
                 <div class="ig-cap">
                   <b>lodgelegends</b> He commanded a revolution, refused a crown
@@ -952,6 +995,10 @@
                 </div>
               </div>
               <p class="ig-hint">← swipe the card →</p>
+              <p class="ig-credit">
+                Archival imagery: public domain via Wikimedia Commons — every
+                image sourced and credited per post.
+              </p>
             </div>
           </div>
 
