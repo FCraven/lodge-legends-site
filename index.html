@@ -397,6 +397,210 @@
           grid-template-columns: 1fr;
         }
       }
+
+      /* ---- Instagram post preview ---- */
+      .igwrap {
+        margin-top: 22px;
+      }
+      .ig {
+        max-width: 420px;
+        margin: 0 auto;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 44px -26px rgba(16, 30, 52, 0.45);
+      }
+      .ig-head {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--hair);
+      }
+      .ig-avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        flex: none;
+        background: radial-gradient(circle at 32% 30%, #24344e, #101c30);
+        border: 1.5px solid var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ig-avatar svg {
+        width: 20px;
+        height: 20px;
+        color: var(--gold-bright);
+      }
+      .ig-handle {
+        font-weight: 600;
+        font-size: 13.5px;
+        color: var(--ink);
+      }
+      .ig-sub {
+        font-size: 11px;
+        color: var(--ink-faint);
+      }
+      .ig-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .ig-carousel::-webkit-scrollbar {
+        display: none;
+      }
+      .slide {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        aspect-ratio: 4 / 5;
+        background: radial-gradient(
+          120% 90% at 50% 0%,
+          #223148 0%,
+          #121e31 55%,
+          #0c1626 100%
+        );
+        color: #e9edf4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 26px;
+        position: relative;
+      }
+      .slide::before,
+      .slide::after {
+        content: "";
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(201, 162, 75, 0.75),
+          transparent
+        );
+      }
+      .slide::before {
+        top: 20px;
+      }
+      .slide::after {
+        bottom: 20px;
+      }
+      .slide .s-kicker {
+        font-family: var(--f-mono);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #c9a24b;
+        margin-bottom: 14px;
+      }
+      .slide .s-name {
+        font-family: var(--f-display);
+        font-size: clamp(26px, 6vw, 34px);
+        font-weight: 600;
+        line-height: 1.1;
+        text-wrap: balance;
+      }
+      .slide .s-years {
+        font-family: var(--f-mono);
+        font-size: 12px;
+        color: #93a3ba;
+        margin-top: 8px;
+        letter-spacing: 0.12em;
+      }
+      .slide .s-lodge {
+        font-family: var(--f-display);
+        font-size: 15px;
+        color: #d9c48a;
+        margin-top: 18px;
+        max-width: 26ch;
+        line-height: 1.45;
+      }
+      .slide .s-fact {
+        font-size: 13.5px;
+        color: #b7c3d5;
+        margin-top: 14px;
+        max-width: 30ch;
+        line-height: 1.55;
+      }
+      .slide .s-emblem {
+        width: 34px;
+        height: 34px;
+        color: #c9a24b;
+        margin-bottom: 16px;
+      }
+      .ig-dots {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        padding: 10px 0 2px;
+      }
+      .ig-dots i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--hair);
+      }
+      .ig-dots i.on {
+        background: var(--gold);
+      }
+      .ig-cap {
+        padding: 8px 14px 14px;
+        font-size: 13px;
+        color: var(--ink-soft);
+      }
+      .ig-cap b {
+        color: var(--ink);
+      }
+      .ig-cap .tags {
+        color: #4a7ab5;
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+      }
+      .ig-hint {
+        text-align: center;
+        font-size: 11.5px;
+        color: var(--ink-faint);
+        margin-top: 10px;
+        font-family: var(--f-mono);
+        letter-spacing: 0.08em;
+      }
+
+      .card {
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 34px -22px rgba(16, 30, 52, 0.5);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .card {
+          transition: none;
+        }
+        .card:hover {
+          transform: none;
+        }
+      }
+
+      .credit {
+        margin-top: 10px;
+      }
+      .credit a {
+        color: var(--ink-faint);
+        text-decoration: none;
+        border-bottom: 1px solid var(--hair);
+      }
+      .credit a:hover {
+        color: var(--gold);
+        border-bottom-color: var(--gold);
+      }
     </style>
   </head>
   <body>
@@ -532,6 +736,120 @@
             </div>
           </div>
 
+          <div class="section">
+            <p class="kicker">A First Look</p>
+            <h2>What a post will look like</h2>
+            <p class="body">
+              Here's the opening Legend, exactly as it will appear on the feed —
+              swipe the card like you would on Instagram.
+            </p>
+            <div class="igwrap">
+              <div class="ig">
+                <div class="ig-head">
+                  <div class="ig-avatar" aria-hidden="true">
+                    <svg viewBox="0 0 100 100">
+                      <path
+                        d="M27 44 L50 74 L73 44"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M35 71 L50 26 L65 71"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="ig-handle">lodgelegends</div>
+                    <div class="ig-sub">Lodge Legends · 1 of 50</div>
+                  </div>
+                </div>
+                <div
+                  class="ig-carousel"
+                  aria-label="Sample carousel: George Washington, three slides"
+                >
+                  <div class="slide">
+                    <svg
+                      class="s-emblem"
+                      viewBox="0 0 100 100"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M27 44 L50 74 L73 44"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M35 71 L50 26 L65 71"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="s-kicker">Lodge Legends · No. I</div>
+                    <div class="s-name">George Washington</div>
+                    <div class="s-years">1732 — 1799</div>
+                    <div class="s-lodge">
+                      Fredericksburg Lodge No.&nbsp;4, Virginia · initiated 1752
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="s-kicker">The Brother</div>
+                    <div
+                      class="s-name"
+                      style="font-size: clamp(20px, 4.6vw, 26px)"
+                    >
+                      A Mason at twenty, a president under oath on a lodge Bible
+                    </div>
+                    <div class="s-fact">
+                      Initiated at 20 in Fredericksburg, he took the
+                      presidential oath in 1789 on the altar Bible of
+                      St.&nbsp;John's Lodge No.&nbsp;1, New York.
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="s-kicker">The Craft</div>
+                    <div
+                      class="s-name"
+                      style="font-size: clamp(20px, 4.6vw, 26px)"
+                    >
+                      The Capitol cornerstone, laid in apron and square
+                    </div>
+                    <div class="s-fact">
+                      In 1793 he laid the U.S. Capitol cornerstone in full
+                      Masonic ceremony — the apron and trowel survive to this
+                      day.
+                    </div>
+                  </div>
+                </div>
+                <div class="ig-dots" aria-hidden="true">
+                  <i class="on"></i><i></i><i></i>
+                </div>
+                <div class="ig-cap">
+                  <b>lodgelegends</b> He commanded a revolution, refused a crown
+                  — and answered to "Brother."
+                  <span class="tags"
+                    >#Freemasonry #LodgeLegends #GeorgeWashington
+                    #MasonicHistory</span
+                  >
+                </div>
+              </div>
+              <p class="ig-hint">← swipe the card →</p>
+            </div>
+          </div>
+
           <div class="section fade d2">
             <p class="kicker">Our Standard</p>
             <h2>Documented, not folklore</h2>
@@ -643,6 +961,12 @@
               >This is the project's preview page, not the lodge's official
               website.</span
             >
+            <div class="credit">
+              <span class="mono"
+                >Designed &amp; built by
+                <a href="https://searavenstudios.com">SeaRaven Studios</a></span
+              >
+            </div>
           </footer>
         </div>
       </div>
