@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Lodge Legends — Our Lodge on Instagram</title>
+    <meta
+      name="description"
+      content="A member preview of the Lodge Legends project: five series bringing our lodge's history, symbols, and story to Instagram."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🏛️</text></svg>"
+    />
+    <style>
+      :root {
+        --ground: #e7ebf2;
+        --paper: #f7f9fc;
+        --panel: #ffffff;
+        --panel2: #eef2f8;
+        --ink: #15243a;
+        --ink-soft: #47566d;
+        --ink-faint: #7f8ca1;
+        --gold: #8f6f22;
+        --gold-bright: #b0892f;
+        --verd: #23675c;
+        --line: rgba(143, 111, 34, 0.26);
+        --hair: rgba(21, 36, 58, 0.12);
+        --seal: #f1ecdd;
+        --shadow: 0 24px 64px -34px rgba(16, 30, 52, 0.5);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ground: #0a1524;
+          --paper: #0e1c2e;
+          --panel: #132437;
+          --panel2: #0f1e30;
+          --ink: #e9edf4;
+          --ink-soft: #a6b4c9;
+          --ink-faint: #718097;
+          --gold: #c9a24b;
+          --gold-bright: #e0bd63;
+          --verd: #63b4a4;
+          --line: rgba(201, 162, 75, 0.3);
+          --hair: rgba(233, 237, 244, 0.1);
+          --seal: #182a41;
+          --shadow: 0 34px 74px -36px rgba(0, 0, 0, 0.82);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        --f-display:
+          "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+          Georgia, serif;
+        --f-body:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto,
+          sans-serif;
+        --f-mono:
+          "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+      }
+      html {
+        background: var(--ground);
+      }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(
+            1100px 560px at 50% -10%,
+            color-mix(in srgb, var(--gold) 9%, transparent),
+            transparent 60%
+          ),
+          var(--ground);
+        color: var(--ink);
+        font-family: var(--f-body);
+        font-size: 16.5px;
+        line-height: 1.62;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 38px 18px 72px;
+      }
+      .frame {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+      .frame::before {
+        content: "";
+        position: absolute;
+        inset: 9px;
+        border: 1px solid var(--hair);
+        pointer-events: none;
+      }
+      .inner {
+        padding: clamp(24px, 4.5vw, 52px);
+        position: relative;
+      }
+
+      .emblem {
+        width: 66px;
+        height: 66px;
+        color: var(--gold);
+        display: block;
+        margin: 0 auto 16px;
+      }
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 12px;
+      }
+      h1 {
+        font-family: var(--f-display);
+        font-weight: 600;
+        font-size: clamp(30px, 5.4vw, 48px);
+        line-height: 1.06;
+        text-align: center;
+        margin: 0 auto;
+        letter-spacing: 0.01em;
+        text-wrap: balance;
+        max-width: 18ch;
+      }
+      .lede {
+        font-family: var(--f-display);
+        font-size: clamp(17px, 2.5vw, 21px);
+        line-height: 1.55;
+        color: var(--ink-soft);
+        text-align: center;
+        max-width: 46ch;
+        margin: 20px auto 0;
+      }
+      .lede b {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .motto {
+        text-align: center;
+        margin-top: 18px;
+        font-family: var(--f-mono);
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      h2 {
+        font-family: var(--f-display);
+        font-weight: 600;
+        font-size: clamp(21px, 3.2vw, 28px);
+        margin: 0 0 4px;
+      }
+      .kicker {
+        font-family: var(--f-mono);
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 600;
+        margin: 0 0 18px;
+      }
+      .section {
+        margin-top: 50px;
+      }
+      p.body {
+        color: var(--ink-soft);
+        max-width: 62ch;
+      }
+      p.body b {
+        color: var(--ink);
+      }
+
+      .series {
+        display: grid;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 18px 20px;
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 4px 16px;
+        align-items: start;
+      }
+      .card .rn {
+        grid-row: 1/3;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--seal);
+        border: 1px solid var(--line);
+        color: var(--gold);
+        font-family: var(--f-display);
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card .t {
+        font-family: var(--f-display);
+        font-size: 19px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .card .t small {
+        font-family: var(--f-mono);
+        font-size: 10.5px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-left: 10px;
+        font-weight: 600;
+      }
+      .card .d {
+        grid-column: 2;
+        color: var(--ink-soft);
+        font-size: 14.5px;
+      }
+      .card.human {
+        border-left: 3px solid var(--verd);
+      }
+      .card.human .t small {
+        color: var(--verd);
+      }
+
+      .names {
+        margin-top: 20px;
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        padding: 20px 22px;
+      }
+      .names .h {
+        font-family: var(--f-display);
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0 0 10px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        font-size: 13px;
+        padding: 5px 12px;
+        border-radius: 100px;
+        border: 1px solid var(--hair);
+        background: var(--panel);
+        color: var(--ink-soft);
+      }
+      .chip.g {
+        border-color: color-mix(in srgb, var(--gold) 45%, transparent);
+        color: var(--gold);
+        font-weight: 600;
+      }
+      .names .note {
+        font-size: 12.5px;
+        color: var(--ink-faint);
+        margin: 12px 0 0;
+      }
+
+      .standard {
+        border: 1px solid var(--gold);
+        padding: 4px;
+        margin-top: 20px;
+      }
+      .standard-in {
+        border: 1px solid var(--line);
+        padding: 22px 24px;
+        background: var(--panel);
+      }
+      .standard h3 {
+        font-family: var(--f-display);
+        font-size: 19px;
+        margin: 0 0 8px;
+      }
+      .standard p {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 15px;
+      }
+      .standard p + p {
+        margin-top: 10px;
+      }
+
+      .help {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 20px;
+      }
+      .helpbox {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 18px 20px;
+      }
+      .helpbox .h {
+        font-family: var(--f-display);
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0 0 8px;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+      }
+      .helpbox .h .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+        flex: none;
+      }
+      .helpbox p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+
+      .faq {
+        margin-top: 20px;
+        display: grid;
+        gap: 12px;
+      }
+      .qa {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--gold);
+        padding: 16px 19px;
+      }
+      .qa .q {
+        font-family: var(--f-display);
+        font-size: 16.5px;
+        font-weight: 600;
+        margin: 0 0 5px;
+        color: var(--ink);
+      }
+      .qa p {
+        margin: 0;
+        font-size: 14.5px;
+        color: var(--ink-soft);
+      }
+
+      footer {
+        margin-top: 48px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        text-align: center;
+        color: var(--ink-faint);
+        font-size: 12.5px;
+      }
+      .mono {
+        font-family: var(--f-mono);
+        font-size: 11.5px;
+      }
+
+      .fade {
+        opacity: 0;
+        transform: translateY(9px);
+        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+      }
+      .fade.d1 {
+        animation-delay: 0.06s;
+      }
+      .fade.d2 {
+        animation-delay: 0.12s;
+      }
+      @keyframes rise {
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .fade {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media (max-width: 640px) {
+        .help {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="frame fade">
+        <div class="inner">
+          <svg
+            class="emblem"
+            viewBox="0 0 100 100"
+            role="img"
+            aria-label="Square and compasses"
+          >
+            <path
+              d="M27 44 L50 74 L73 44"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M35 71 L50 26 L65 71"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle cx="50" cy="24" r="3.6" fill="currentColor" />
+            <circle cx="35" cy="71" r="2.5" fill="currentColor" />
+            <circle cx="65" cy="71" r="2.5" fill="currentColor" />
+            <text
+              x="50"
+              y="57.5"
+              text-anchor="middle"
+              font-family="Georgia,serif"
+              font-style="italic"
+              font-size="19"
+              fill="currentColor"
+            >
+              G
+            </text>
+          </svg>
+          <p class="eyebrow">
+            A Project for the Brethren &amp; Friends of the Lodge
+          </p>
+          <h1>Lodge Legends</h1>
+          <p class="lede">
+            We're bringing the lodge to Instagram — the great men of the Craft,
+            the meaning of our symbols, and the life of <b>our own lodge</b> —
+            told carefully, sourced properly, and published like clockwork.
+          </p>
+          <p class="motto">A society with secrets · not a secret society</p>
+
+          <div class="section fade d1">
+            <p class="kicker">What's Coming</p>
+            <h2>Five series, one feed</h2>
+            <p class="body">
+              Each week follows a steady rhythm. Four series are researched and
+              prepared in advance; one belongs to the lodge itself.
+            </p>
+            <div class="series">
+              <div class="card">
+                <div class="rn">I</div>
+                <div class="t">
+                  Lodge Legends <small>Mon · Wed · Fri</small>
+                </div>
+                <div class="d">
+                  Fifty documented famous Freemasons — presidents, composers,
+                  explorers, athletes, astronauts — one richly illustrated
+                  biography at a time, each tied to his actual lodge and dates.
+                </div>
+              </div>
+              <div class="card">
+                <div class="rn">II</div>
+                <div class="t">On This Day <small>Tuesdays</small></div>
+                <div class="d">
+                  A Masonic almanac: the first Grand Lodge in 1717, Washington
+                  laying the Capitol cornerstone, the day Mozart was initiated.
+                  History, on its own anniversary.
+                </div>
+              </div>
+              <div class="card">
+                <div class="rn">III</div>
+                <div class="t">The Craft, Explained <small>Sundays</small></div>
+                <div class="d">
+                  What the Square &amp; Compasses actually mean, why Masons wear
+                  the apron, where "on the level" comes from — and the record
+                  set straight on the great myths (no, Bach and Lincoln were not
+                  Masons).
+                </div>
+              </div>
+              <div class="card human">
+                <div class="rn">IV</div>
+                <div class="t">This Lodge <small>Thursdays · by us</small></div>
+                <div class="d">
+                  The living lodge: our charity work, our building, our
+                  fellowship. The one series no archive can write — it comes
+                  from the brethren.
+                </div>
+              </div>
+              <div class="card">
+                <div class="rn">V</div>
+                <div class="t">Masonic Light <small>Saturdays</small></div>
+                <div class="d">
+                  Words from the brothers themselves — Washington, Twain,
+                  Churchill, Kipling — every quotation checked against the
+                  original letter, speech, or book before it's shared.
+                </div>
+              </div>
+            </div>
+
+            <div class="names">
+              <p class="h">Among the fifty Legends ahead</p>
+              <div class="chips">
+                <span class="chip g">George Washington</span
+                ><span class="chip">Benjamin Franklin</span
+                ><span class="chip g">Mozart</span
+                ><span class="chip">Mark Twain</span
+                ><span class="chip">Harry Houdini</span
+                ><span class="chip g">Buzz Aldrin</span
+                ><span class="chip">Winston Churchill</span
+                ><span class="chip">Duke Ellington</span
+                ><span class="chip">Theodore Roosevelt</span
+                ><span class="chip">Thurgood Marshall</span
+                ><span class="chip">Harry S. Truman</span
+                ><span class="chip">…and 39 more</span>
+              </div>
+              <p class="note">
+                Every man on the list holds documented membership — lodge,
+                dates, and source — before he's featured.
+              </p>
+            </div>
+          </div>
+
+          <div class="section fade d2">
+            <p class="kicker">Our Standard</p>
+            <h2>Documented, not folklore</h2>
+            <div class="standard">
+              <div class="standard-in">
+                <h3>If it can't be sourced, it isn't posted.</h3>
+                <p>
+                  The internet is full of "famous Freemasons" who never were —
+                  Bach, Lincoln, Beethoven, Einstein all make the viral lists,
+                  and none has a documented lodge record. This project holds a
+                  harder line: every membership claim traces to Grand Lodge
+                  registries, lodge minutes, or reputable Masonic scholarship,
+                  and every image is public-domain or properly licensed with its
+                  source recorded.
+                </p>
+                <p>
+                  Brethren who know the history will read these posts. They're
+                  written to survive that audience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <p class="kicker">Take Part</p>
+            <h2>Where the brethren come in</h2>
+            <div class="help">
+              <div class="helpbox">
+                <div class="h"><span class="dot"></span>Thursdays are ours</div>
+                <p>
+                  The "This Lodge" series runs on what we give it — a photo from
+                  a charity drive, the hall, a degree night's fellowship (always
+                  with consent, always within what the lodge is comfortable
+                  sharing). If you have something worth showing, pass it to the
+                  officers running the page.
+                </p>
+              </div>
+              <div class="helpbox">
+                <div class="h">
+                  <span class="dot"></span>Review before it airs
+                </div>
+                <p>
+                  Every prepared post sits in a preview queue about two weeks
+                  ahead of its date. Interested members can look over what's
+                  coming, suggest corrections, or flag anything — nothing
+                  publishes that the lodge wouldn't stand behind.
+                </p>
+              </div>
+              <div class="helpbox">
+                <div class="h">
+                  <span class="dot"></span>Follow, share, comment
+                </div>
+                <p>
+                  The simplest help is the biggest: follow the page, share the
+                  posts you like, and answer thoughtfully when friends ask about
+                  them. Every post is a door someone might knock on.
+                </p>
+              </div>
+              <div class="helpbox">
+                <div class="h"><span class="dot"></span>Know the history?</div>
+                <p>
+                  If you catch an error or know a source we missed, say so —
+                  corrections make the project stronger, and that's the point of
+                  the standard we've set.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <p class="kicker">Fair Questions</p>
+            <h2>What members have asked</h2>
+            <div class="faq">
+              <div class="qa">
+                <p class="q">Does this expose anything it shouldn't?</p>
+                <p>
+                  No. Everything published is drawn from openly available
+                  history and scholarship — the same material in Grand Lodge
+                  museums and public libraries. Anything touching ceremony is
+                  reviewed by the lodge before it airs, and the modes of
+                  recognition are never part of this project.
+                </p>
+              </div>
+              <div class="qa">
+                <p class="q">Who runs it?</p>
+                <p>
+                  The research, writing, and scheduling run on an automated
+                  pipeline built for the lodge; the page itself is administered
+                  by our own members, who approve the queue and handle every
+                  reply. Machines do the clerical work — the lodge keeps the
+                  voice.
+                </p>
+              </div>
+              <div class="qa">
+                <p class="q">Why do this at all?</p>
+                <p>
+                  Because good men can't petition a lodge they never think
+                  about. Telling our story well — honestly, publicly, and with
+                  some craft — is how the next generation finds us.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <footer>
+            Lodge Legends · a project by members of the lodge · launching soon
+            on Instagram<br />
+            <span class="mono"
+              >This is the project's preview page, not the lodge's official
+              website.</span
+            >
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
